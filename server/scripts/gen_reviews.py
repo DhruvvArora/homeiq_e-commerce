@@ -5,7 +5,7 @@ import psycopg2
 from psycopg2.extras import RealDictCursor
 
 
-openai.api_key = "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"
+openai.api_key = ""
 
 
 es = Elasticsearch("http://localhost:9200") 
