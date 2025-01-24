@@ -1,0 +1,115 @@
+.sidebar {
+  width: 250px;
+  background-color: #ffffff;
+  height: 100vh;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  padding: 1.5rem;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.sidebar h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  letter-spacing: 0.5px;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar li {
+  margin: 0;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #f8f9fa;
+  color: #3498db;
+  transform: translateX(5px);
+}
+
+/* Add icons to the links */
+.sidebar a::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+
+.sidebar a[href*="product"]::before,
+.sidebar a[href*="shop"]::before {
+  content: "\f07a";
+}
+
+.sidebar a[href*="cart"]::before {
+  content: "\f07a";
+}
+
+.sidebar a[href*="review"]::before {
+  content: "\f086";
+}
+
+.sidebar a[href*="trending"]::before {
+  content: "\f201";
+}
+
+.sidebar a[href*="inventory"]::before {
+  content: "\f466";
+}
+
+.sidebar a[href*="sales"]::before {
+  content: "\f201";
+}
+
+.sidebar a[href*="features"]::before {
+  content: "\f005";
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 80px;
+    padding: 1.5rem 0.5rem;
+  }
+
+  .sidebar h4 {
+    font-size: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .sidebar h4::before {
+    content: "HQ";
+    font-size: 1.2rem;
+  }
+
+  .sidebar a {
+    padding: 0.75rem;
+    justify-content: center;
+  }
+
+  .sidebar a span {
+    display: none;
+  }
+}

@@ -1,0 +1,53 @@
+ /* Add or update these styles in your theme.css */
+
+/* Reset default margins and ensure full height */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Ensure root div takes full height */
+  #root {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Update App container */
+  .App {
+    flex: 1;
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden; /* Prevents scrollbar */
+  }
+  
+  /* Main content container */
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Allows scrolling within content if needed */
+  }
+  
+  /* Adjust sidebar */
+  .sidebar {
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+  }
+  
+  /* Adjust content margin for sidebar */
+  .content-with-sidebar {
+    margin-left: 150px; /* Adjust based on your sidebar width */
+    width: calc(100% - 150px);
+    min-height: 100vh;
+  }
+  
+  /* Container for pages */
+  .page-container {
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }

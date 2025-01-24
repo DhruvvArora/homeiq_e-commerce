@@ -1,0 +1,90 @@
+.review-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.review-title {
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.search-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.search-input {
+  margin-top: 10px;
+  flex: 8;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  height: 40px;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+.search-button {
+  flex: 1;
+  padding: 0 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 13px;
+  white-space: nowrap;
+  height: 40px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+.results-section {
+  margin-top: 20px;
+}
+
+.results-title {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.result-card {
+  background-color: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-height: 210px;
+}
+
+.product-name {
+  color: #2c3e50;
+  margin: 0 0 10px 0;
+}
+
+.review-text {
+  font-style: normal;
+  line-height: 1.1;
+  margin: 0;
+  overflow: hidden;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.review-text strong {
+  font-weight: 600;
+}

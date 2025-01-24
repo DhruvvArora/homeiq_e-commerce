@@ -1,0 +1,31 @@
+.carousel {
+  margin-top: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-caption {
+  background: rgba(44, 62, 80, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  bottom: 20px;
+}
+
+.carousel-caption h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.carousel-item img {
+  height: 450px;
+  object-fit: cover;
+}
+
