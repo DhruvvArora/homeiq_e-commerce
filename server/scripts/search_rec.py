@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)
 
 
-openai.api_key = "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"
+openai.api_key = ""
 es = Elasticsearch("http://localhost:9200")  
 @app.route('/products', methods=['POST'])
 def search_products():
