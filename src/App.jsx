@@ -24,13 +24,8 @@ function AppContent() {
   const shouldShowSidebar = !hideSidebarPaths.includes(location.pathname);
 
   return (
-    <div className="App" style={{ display: "flex", minHeight: "100vh" }}>
-      {shouldShowSidebar && <Sidebar />}
-      <div style={{ 
-        marginLeft: shouldShowSidebar ? "150px" : "0", 
-        flexGrow: 1, 
-        padding: "20px" 
-      }}>
+    <div className="App" style={{ display: "flex" }}>
+      <div style={{ flexGrow: 1, minWidth: 0 }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
