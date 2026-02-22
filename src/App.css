@@ -1,44 +1,18 @@
+/* Global reset to prevent width overflow from padding */
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* fallback safety */
+}
+
 .App {
   font-family: Arial, sans-serif;
-  padding: 5px;
-}
-
-.header {
-  text-align: center;
-  padding: 40px 20px;
-  background: #ffffff;
-}
-
-.header h1 {
-  font-size: 2.5rem;
-  color: #2c3e50;
-  font-weight: 700;
-  margin: 0;
-  position: relative;
-  display: inline-block;
-}
-
-.header h1::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background-color: #3498db;
-  border-radius: 2px;
-}
-
-.home-container {
-  display: flex;
-  min-height: calc(100vh - 60px); /* Adjust based on your navbar height */
-}
-
-.main-content {
-  flex: 1;
-  padding: 20px;
-  overflow-y: auto;
+  padding: 0; /* remove extra page padding if not needed */
 }
 
 .layout-wrapper {
@@ -46,23 +20,78 @@
   min-height: 100vh;
 }
 
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+/* Main area to the right of the fixed sidebar */
 .main-content {
-  margin-left: 100px; /* Match sidebar width */
-  width: calc(100% - 250px);
+  margin-top: 80px;          /* matches navbar height */
+  margin-left: 250px;        /* matches sidebar width */
+  min-height: calc(100vh - 80px);
+  width: calc(100% - 250px); /* fill remaining width */
+  min-width: 0;              /* prevents overflow in flex layouts */
   padding: 1.5rem;
-  margin-top: 60px; /* Match navbar height */
-  min-height: calc(100vh - 60px); /* Full height minus navbar */
+  overflow-x: hidden;
 }
 
-/* Reset default margin and padding */
-body {
-  margin: 0;
-  padding: 0;
-}
-
+/* Mobile sidebar width matches sidebar.css */
 @media (max-width: 768px) {
   .main-content {
     margin-left: 80px;
     width: calc(100% - 80px);
+  }
+}
+
+/* Latest Products title */
+.latest-products-title {
+  text-align: center;
+  margin: 24px 0 18px;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Filter buttons row */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0 30px;
+  flex-wrap: wrap;
+}
+
+/* IMPORTANT: prevent full-width buttons on desktop */
+.filter-buttons button,
+.filter-buttons .btn {
+  width: auto !important;
+  min-width: 180px;
+  max-width: 260px;
+  flex: 0 1 auto;
+  white-space: nowrap;
+}
+
+/* Mobile: stack nicely if needed */
+@media (max-width: 768px) {
+  .filter-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-buttons button,
+  .filter-buttons .btn {
+    width: 100% !important;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .latest-products-title {
+    font-size: 1.6rem;
+    text-align: center;
   }
 }
