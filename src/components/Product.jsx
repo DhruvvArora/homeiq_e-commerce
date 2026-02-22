@@ -107,7 +107,7 @@ const Product = () => {
   return (
     <div className="App" id="product">
       <header className="header">
-        <h1>Latest Products</h1>
+        <h1 className="latest-products-title">Latest Products</h1>
       </header>
       <div className="filter-buttons">
         <button onClick={() => setCategory("All")}>All</button>
@@ -121,3 +121,4 @@ const Product = () => {
 };
 
 export default Product;
+
